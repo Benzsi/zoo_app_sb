@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoo Animals</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Zoo Animals</h1>
+  </header>
+  <main>
+
+    <section id="animals-section">
+      <h2>Animals List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody id="animals-body"></tbody>
+      </table>
+    </section>
+
+    <section id="species-section">
+      <h2>Species Count</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Species</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody id="species-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <template id="animal-row-template">
+    <tr>
+      <td class="animal-id"></td>
+      <td class="animal-name"></td>
+      <td class="animal-species"></td>
+      <td class="animal-age"></td>
+    </tr>
+  </template>
+
+  <form id="add-animal-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+    
+    <label for="species">Species:</label>
+    <input type="text" id="species" name="species" required />
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required />
+    
+    <button type="submit">Add Animal</button>
+  </form>
+
+  <template id="species-row-template">
+    <tr>
+      <td class="species-name"></td>
+      <td class="species-count"></td>
+    </tr>
+  </template>
+
+  <script src="src/main.ts"></script>
+</body>
+</html>
+
+
